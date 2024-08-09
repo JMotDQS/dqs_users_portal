@@ -20,17 +20,6 @@ Media queries are for styling on larger screens.
 	--color-light: #253da1;
 	--color-extra-light: hsla(228, 63%, 70%, 1);
 
-	--color-lego-yellow: #ffcf00;
-	--color-lego-yellow-secondary: #b39200;
-	--color-lego-yellow-secondary2: rgba(247, 208, 71, .6);
-	--color-lego-red: #d02c22;
-	--color-lego-red-secondary: #801a14;
-	--color-page-background: #eeeeee;
-	--color-icon: #575757;
-	--color-border: #393939;
-	--color-dropshadow: rgba(0, 0, 0, .45);
-
-	--navbar-height: 4vh;
 	--quarter-rem: .25rem;
 	--half-rem: .5rem;
 	--full-rem: 1rem;
@@ -38,23 +27,12 @@ Media queries are for styling on larger screens.
 	--full-half-rem: 1.5rem;
 	--navbar-corner-radius: 1.5rem;
 	--navbar-border-size: 2px;
-
-	--transition-speed: 300ms;
-	--loading-speed-enter: 300ms;
-
-	--first-half-logo-centering: calc(100vw / 2) - calc(var(--half-rem) + var(--full-rem) + 1px);
-	--second-half-logo-centering: calc(calc(var(--navbar-height) * .625) / 2);
-	--mobile-logo-ceter-right-margins: calc(var(--first-half-logo-centering) - var(--second-half-logo-centering));
 }
 
 body {
 	background-color: var(--color-page-background);
-	/*margin: var(--half-rem);*/
 	font-size: calc(var(--full-rem) * .75);
 	color: var(--color-dark);
-	/* font-family: "Raleway"; */
-	/*font-family: "Signika";*/
-	/*font-family: "Montserrat";*/
 }
 
 main {
@@ -63,7 +41,6 @@ main {
 	text-align: center;
 	font-weight: 600;
 	font-size: var(--full-rem);
-	/* display: none; */
 }
 
 ul {
