@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	$('app').html('Please Start Search');
-	//setSearchResults();
 });
 
 const searchResults = [

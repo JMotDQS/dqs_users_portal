@@ -35,8 +35,7 @@ function updateRecordPromise(param_index) {
             data: {
                 'user_id': search_array[param_index]['id'],
                 'user_approved': search_array[param_index]['approved'],
-                'user_activated': search_array[param_index]['activated']
-				//'search_name': dataCleanUp($('#navbar-search').val()),
+                'user_activated': search_array[param_index]['activated'],
 			},
 
 			success: function (data) {
