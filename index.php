@@ -51,33 +51,7 @@
 
 	<main>
 		<app></app>
-		<div class="search-results">
-			<!--<div class="card" data-id='1'>
-				<div class="card-grid card-titles">
-					<div>Last, First Name</div>
-					<div>Email</div>
-					<div>Badge</div>
-					<div id="active-label"></div>
-				</div>
-				<div class="card-grid card-data">
-					<div>
-						Song, River
-					</div>
-					<div>
-						rsong@dwho.com
-					</div>
-					<div>
-						DQS99999
-					</div>
-					<div>
-						<label class="switch">
-							<input type="checkbox" id="dnr" name="dnr">
-							<span class="slider round"></span>
-						</label>
-					</div>
-				</div>
-			</div>-->
-		</div>
+		<div class="search-results"></div>
 	</main>
 
 
@@ -99,5 +73,7 @@
 
 	<!-- Custom JavaScript -->
 	<script src="js/index.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/promises.js"></script>
 	</body>
 </html>
