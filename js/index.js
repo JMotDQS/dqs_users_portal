@@ -119,12 +119,14 @@ function setSearchResults() {
 					temp_html += `<div>Last, First Name</div>`;
 					temp_html += `<div>Email</div>`;
 					temp_html += `<div>Badge</div>`;
+					temp_html += `<div>Role</div>`;
 					temp_html += `<div class="active-label" id="active-label_${search_array[i]['id']}">Deactivate</div>`;
 			temp_html += `</div>`;
 			temp_html += `<div class="card-grid card-data">`;
 				temp_html += `<div>${search_array[i]['last_name']}, ${search_array[i]['first_name']}</div>`;
 				temp_html += `<div>${search_array[i]['email']}</div>`;
 				temp_html += `<div>${search_array[i]['badge']}</div>`;
+				temp_html += `<div>${search_array[i]['role']}</div>`;
 				temp_html += `<div>`;
 					temp_html += `<label class="switch">`;
 						temp_html += `<input type="checkbox" id="dnr_${search_array[i]['id']}" name="dnr_${search_array[i]['id']}" onClick="toggleClicked(this.id)">`;
