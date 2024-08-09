@@ -1,0 +1,54 @@
+nav {
+	background-color: var(--color-medium-light);
+	color: #ffffff;
+	padding: var(--half-rem) var(--full-rem);
+	/*border-radius: var( --navbar-corner-radius);*/
+	border: var(--color-lego-yellow-secondary) 1px solid;
+	margin-bottom: var(--half-rem);
+
+	/* Makes the narbar 'sticky' when it's top value is 0 */
+	/*position: sticky;
+	top: 0;
+	z-index: 10;*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-items > li {
+	margin: 0;
+	padding: var(--full-rem) var(--half-rem);
+	/*color: #ffffff;*/
+}
+.menu-items > li a {
+	display: block;
+	font-weight: 700;
+	/*color: #ffffff;*/
+	color: var(--color-extra-light);
+	cursor: pointer;
+}
+.menu-items > li a:hover{
+	color: #ffffff;
+}
+
+/****************
+Mobile Menu
+****************/
+.menu-items > li {
+	width: 100%;
+	text-align: center;
+	/*color: #ffffff;*/
+}
+
+
+/****************
+	Tablet/Desktop Menu
+****************/
+@media all and (min-width: 590px) {
+	.menu-items > li {
+		display: inline-block;
+		width: auto;
+		padding: 0 var(--half-rem);
+		/*color: #ffffff;*/
+	}
+}
