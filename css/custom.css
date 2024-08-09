@@ -51,13 +51,17 @@ a {
 	color: #000000;
 }
 
-.img-opacity {
-	opacity: 50%;
+.button {
+	border-radius: var(--quarter-rem);
+	border: none;
+	background-color: var(--color-extra-light);
+	color: var(--color-medium-dark);
+	padding-block: var(--quarter-rem);
+	padding-inline: var(--half-rem);
+	cursor: pointer;
 }
-
-.shell {
-	margin: 0;
-	padding: 0;
+.button:hover {
+	color: white;
 }
 
 .grid-container {

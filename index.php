@@ -25,6 +25,7 @@
 		<div id="navbar-search-group">
 			<label for="navbar-search">User Search:</label>
 			<input type=text id="navbar-search" name="navbar-search" />
+			<button class="button" onClick="startSearch()">Search</button>
 		</div>
 		<div class="menu-items">
 			<li>
