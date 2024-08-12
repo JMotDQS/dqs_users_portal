@@ -6,12 +6,13 @@ function startSearchPromise() {
 			cache: false,
 			dataType: 'json',
             data: {
-				'search_name': dataCleanUp($('#navbar-search').val()),
+				'search_name': dataCleanUp($('#navbar-search').val())
 			},
 
 			success: function (data) {
-                search_array = [];
-				search_array = data;
+                //search_array = [];
+				//search_array = data;
+				console.log("data:", data);
 				resolve(true);
 			},
 

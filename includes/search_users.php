@@ -10,6 +10,9 @@
 	$dbPass = 'Rkakfsus97313';
     $dsn = "mysql:host = $dbHost;port = $dbPort;dbname = $dbName";*/
 
+	//echo $_POST['search_name'];
+	//die();
+
 	$return_array = [];
 	$connection = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 	//if(mysqli_connect_error()) {//Use for PHP versions prior to 5.3
@@ -30,7 +33,7 @@
 
 	$close_success = $connection->close();
 	if($close_success) {
-		echo json_encode($return_array);
+		echo json_encode($sql);
 	}
 
 ?>
