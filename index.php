@@ -50,8 +50,8 @@
 	</nav>
 
 	<main>
-		<app></app>
-		<div class="search-results"></div>
+		<app class="app" id="app"></app>
+		<div class="search-results">&nbsp;</div>
 	</main>
 
 

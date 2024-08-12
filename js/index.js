@@ -2,45 +2,6 @@ $(document).ready(function() {
 	$('app').html('Please Start Search');
 });
 
-const searchResults = [
-	{
-		'id':702,
-		'firstName':'River',
-		'lastName':'Song',
-		'email':'rsong@dwho.com',
-		'badge':'DQS99998',
-		'approved':1,
-		'activated':1
-	},
-	{
-		'id':703,
-		'firstName':'Amy',
-		'lastName':'Pond',
-		'email':'apond@dwho.com',
-		'badge':'DQS99997',
-		'approved':0,
-		'activated':0
-	},
-	{
-		'id':704,
-		'firstName':'Clara',
-		'lastName':'Oswald',
-		'email':'coswald@dwho.com',
-		'badge':'DQS99996',
-		'approved':1,
-		'activated':0
-	},
-	{
-		'id':705,
-		'firstName':'Rory',
-		'lastName':'Williams',
-		'email':'rwilliams@dwho.com',
-		'badge':'DQS99995',
-		'approved':0,
-		'activated':1
-	}
-];
-
 /*******
  if(!$('#dnr').is(':checked')) {
     console.log("DNR");
@@ -120,53 +81,59 @@ function updateRecord(param_index) {
 function setSearchResults() {
 	temp_html = '';
 	resultsLength = search_array.length;
+	if(resultsLength < 1) {
+		$('app').html('No results found.');
+		$('.search-results').html('&nbsp;');
+	} else {
+		$('app').html(resultsLength + ' result(s) found.');
 
-	for(i = 0; i <  resultsLength; i++) {
-		temp_html += `<div class="card" data-id='${search_array[i]['id']}'>`;
-			temp_html += `<div class="card-grid card-titles">`;
-					temp_html += `<div>Last, First Name</div>`;
-					temp_html += `<div>Email</div>`;
-					temp_html += `<div>Badge</div>`;
-					temp_html += `<div>Role</div>`;
-					temp_html += `<div class="active-label" id="active-label_${search_array[i]['id']}">Deactivate</div>`;
-			temp_html += `</div>`;
-			temp_html += `<div class="card-grid card-data">`;
-				temp_html += `<div>${search_array[i]['last_name']}, ${search_array[i]['first_name']}</div>`;
-				temp_html += `<div>${search_array[i]['email']}</div>`;
-				temp_html += `<div>${search_array[i]['badge']}</div>`;
-
-				temp_html += `<div>`;
-					temp_html += `<select name="roles_${search_array[i]['id']}" id="roles_${search_array[i]['id']}" onchange="updateRole(this.id)">`;
-						temp_html += `<option value="Security Guard">Security Guard</option>`;
-						temp_html += `<option value="Security Supervisor">Security Supervisor</option>`;
-						temp_html += `<option value="Recruiter">Recruiter</option>`;
-						temp_html += `<option value="HR">HR</option>`;
-						temp_html += `<option value="Admin">Admin</option>`;
-						temp_html += `<option value="Driveaway">Driveaway</option>`;
-					temp_html += `</select>`;
+		for(i = 0; i <  resultsLength; i++) {
+			temp_html += `<div class="card" data-id='${search_array[i]['id']}'>`;
+				temp_html += `<div class="card-grid card-titles">`;
+						temp_html += `<div>Last, First Name</div>`;
+						temp_html += `<div>Email</div>`;
+						temp_html += `<div>Badge</div>`;
+						temp_html += `<div>Role</div>`;
+						temp_html += `<div class="active-label" id="active-label_${search_array[i]['id']}">Deactivate</div>`;
 				temp_html += `</div>`;
+				temp_html += `<div class="card-grid card-data">`;
+					temp_html += `<div>${search_array[i]['last_name']}, ${search_array[i]['first_name']}</div>`;
+					temp_html += `<div>${search_array[i]['email']}</div>`;
+					temp_html += `<div>${search_array[i]['badge']}</div>`;
 
-				temp_html += `<div>`;
-					temp_html += `<label class="switch">`;
-						temp_html += `<input type="checkbox" id="dnr_${search_array[i]['id']}" name="dnr_${search_array[i]['id']}" onClick="toggleClicked(this.id)">`;
-						temp_html += `<span class="slider round"></span>`;
-					temp_html += `</label>`;
+					temp_html += `<div>`;
+						temp_html += `<select name="roles_${search_array[i]['id']}" id="roles_${search_array[i]['id']}" onchange="updateRole(this.id)">`;
+							temp_html += `<option value="Security Guard">Security Guard</option>`;
+							temp_html += `<option value="Security Supervisor">Security Supervisor</option>`;
+							temp_html += `<option value="Recruiter">Recruiter</option>`;
+							temp_html += `<option value="HR">HR</option>`;
+							temp_html += `<option value="Admin">Admin</option>`;
+							temp_html += `<option value="Driveaway">Driveaway</option>`;
+						temp_html += `</select>`;
+					temp_html += `</div>`;
+
+					temp_html += `<div>`;
+						temp_html += `<label class="switch">`;
+							temp_html += `<input type="checkbox" id="dnr_${search_array[i]['id']}" name="dnr_${search_array[i]['id']}" onClick="toggleClicked(this.id)">`;
+							temp_html += `<span class="slider round"></span>`;
+						temp_html += `</label>`;
+					temp_html += `</div>`;
 				temp_html += `</div>`;
 			temp_html += `</div>`;
-		temp_html += `</div>`;
-	}
-	$('.search-results').html(temp_html);
-
-	for(i = 0; i <  resultsLength; i++) {
-		if(parseInt(search_array[i]['approved']) == 1 && parseInt(search_array[i]['activated']) == 1) {
-			$('#dnr_' + search_array[i]['id']).prop( "checked", false );
-		} else {
-			$('#dnr_' + search_array[i]['id']).prop( "checked", true );
 		}
+		$('.search-results').html(temp_html);
 
-		toggleSet(search_array[i]['id']);
+		for(i = 0; i <  resultsLength; i++) {
+			if(parseInt(search_array[i]['approved']) == 1 && parseInt(search_array[i]['activated']) == 1) {
+				$('#dnr_' + search_array[i]['id']).prop( "checked", false );
+			} else {
+				$('#dnr_' + search_array[i]['id']).prop( "checked", true );
+			}
 
-		$('#roles_' + search_array[i]['id']).val(`${search_array[i]['role']}`);
+			toggleSet(search_array[i]['id']);
+
+			$('#roles_' + search_array[i]['id']).val(`${search_array[i]['role']}`);
+		}
 	}
 }
 
