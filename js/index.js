@@ -75,6 +75,14 @@ function toggleClicked(e) {
 	}
 }
 
+function updateRole(e) {
+	e.preventDefault;
+	my_id = parseInt(e.slice( (e.indexOf('_') + 1) ));
+	var index = search_array.findIndex(p => p.id == my_id);
+	search_array[index]['role'] = $('#roles_' + my_id).val();
+	updateRecord(index);
+}
+
 function testFindIndex(param_id, param_flag) {
 	var index = search_array.findIndex(p => p.id == param_id);
 	if(param_flag) {
@@ -126,7 +134,18 @@ function setSearchResults() {
 				temp_html += `<div>${search_array[i]['last_name']}, ${search_array[i]['first_name']}</div>`;
 				temp_html += `<div>${search_array[i]['email']}</div>`;
 				temp_html += `<div>${search_array[i]['badge']}</div>`;
-				temp_html += `<div>${search_array[i]['role']}</div>`;
+
+				temp_html += `<div>`;
+					temp_html += `<select name="roles_${search_array[i]['id']}" id="roles_${search_array[i]['id']}" onchange="updateRole(this.id)">`;
+						temp_html += `<option value="Security Guard">Security Guard</option>`;
+						temp_html += `<option value="Security Supervisor">Security Supervisor</option>`;
+						temp_html += `<option value="Recruiter">Recruiter</option>`;
+						temp_html += `<option value="HR">HR</option>`;
+						temp_html += `<option value="Admin">Admin</option>`;
+						temp_html += `<option value="Driveaway">Driveaway</option>`;
+					temp_html += `</select>`;
+				temp_html += `</div>`;
+
 				temp_html += `<div>`;
 					temp_html += `<label class="switch">`;
 						temp_html += `<input type="checkbox" id="dnr_${search_array[i]['id']}" name="dnr_${search_array[i]['id']}" onClick="toggleClicked(this.id)">`;
@@ -146,6 +165,8 @@ function setSearchResults() {
 		}
 
 		toggleSet(search_array[i]['id']);
+
+		$('#roles_' + search_array[i]['id']).val(`${search_array[i]['role']}`);
 	}
 }
 

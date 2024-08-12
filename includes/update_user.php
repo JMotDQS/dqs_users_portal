@@ -17,8 +17,8 @@
 		die("Connect Error (".mysqli_connect_errno().") ".mysqli_connect_error());
 	} else {
         $sql = "UPDATE users
-                SET approved = ".(int) $_POST['user_approved'].", activated = ".(int) $_POST['user_activated']."
-                WHERE id = ".(int) $_POST['user_id'];
+                SET approved = ".(int) $_POST['user_approved'].", activated = ".(int) $_POST['user_activated'].", role = '".$_POST['user_role']."'
+				WHERE id = ".(int) $_POST['user_id'];
 		$res = $connection->query($sql);
 	}
 

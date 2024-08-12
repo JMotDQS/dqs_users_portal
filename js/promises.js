@@ -12,7 +12,6 @@ function startSearchPromise() {
 			success: function (data) {
                 search_array = [];
 				search_array = data;
-				//console.log("data:", data);
 				resolve(true);
 			},
 
@@ -37,6 +36,7 @@ function updateRecordPromise(param_index) {
                 'user_id': search_array[param_index]['id'],
                 'user_approved': search_array[param_index]['approved'],
                 'user_activated': search_array[param_index]['activated'],
+                'user_role': search_array[param_index]['role'],
 			},
 
 			success: function (data) {
