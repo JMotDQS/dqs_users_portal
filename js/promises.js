@@ -10,9 +10,9 @@ function startSearchPromise() {
 			},
 
 			success: function (data) {
-                //search_array = [];
-				//search_array = data;
-				console.log("data:", data);
+                search_array = [];
+				search_array = data;
+				//console.log("data:", data);
 				resolve(true);
 			},
 

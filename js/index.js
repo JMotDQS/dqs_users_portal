@@ -89,7 +89,7 @@ function testFindIndex(param_id, param_flag) {
 
 function startSearch() {
 	startSearchPromise().then(function(resolve) {
-		console.log("Search Completed.");
+		console.log("startSearch():Search Completed.");
 		setSearchResults();
 	}).catch(function(reject) {
 		//console.log("Search Loaded!");

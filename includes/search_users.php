@@ -33,7 +33,7 @@
 
 	$close_success = $connection->close();
 	if($close_success) {
-		echo json_encode($sql);
+		echo json_encode($return_array);
 	}
 
 ?>
