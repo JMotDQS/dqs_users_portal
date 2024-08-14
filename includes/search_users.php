@@ -1,17 +1,5 @@
 <?php
 	include("config.php");
-	/*$dbHost = '127.0.0.1';
-
-	$dbPort = '3306';
-	// the local port you specified in the SSH tunnel script
-
-	$dbName = 'detroit';
-	$dbUser = 'root';
-	$dbPass = 'Rkakfsus97313';
-    $dsn = "mysql:host = $dbHost;port = $dbPort;dbname = $dbName";*/
-
-	//echo $_POST['search_name'];
-	//die();
 
 	$return_array = [];
 	$connection = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
