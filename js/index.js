@@ -1,5 +1,11 @@
 $(document).ready(function() {
 	$('app').html('Please Start Search');
+
+	/*const myModal = document.querySelector('.modal');
+	const newUserButton = document.querySelector('[data-new-user]');
+	newUserButton.addEventListener('click', () => {
+		myModal.showModal();
+	})*/
 });
 
 /*******
@@ -105,9 +111,9 @@ function setSearchResults() {
 						temp_html += `<select name="roles_${search_array[i]['id']}" id="roles_${search_array[i]['id']}" onchange="updateRole(this.id)">`;
 							temp_html += `<option value="Security Guard">Security Guard</option>`;
 							temp_html += `<option value="Security Supervisor">Security Supervisor</option>`;
-							temp_html += `<option value="Recruiter">Recruiter</option>`;
-							temp_html += `<option value="HR">HR</option>`;
-							temp_html += `<option value="Admin">Admin</option>`;
+							//temp_html += `<option value="Recruiter">Recruiter</option>`;
+							//temp_html += `<option value="HR">HR</option>`;
+							//temp_html += `<option value="Admin">Admin</option>`;
 							temp_html += `<option value="Driveaway">Driveaway</option>`;
 						temp_html += `</select>`;
 					temp_html += `</div>`;
@@ -171,4 +177,12 @@ function setKeyEvents(param_page, param_element, param_multiplier = 1) {
 
 function clearTimer(param_timer) {
 	window.clearTimeout(param_timer); // prevent errant multiple timeouts from being generated
+}
+
+function openModal() {
+	//e.prevent.default;
+	//console.log("openModal() reached");
+	const myModal = document.querySelector('.modal');
+	//console.log(myModal);
+	myModal.showModal();
 }

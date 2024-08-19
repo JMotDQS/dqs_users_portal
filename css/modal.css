@@ -1,0 +1,60 @@
+.modal {
+	padding: var(--half-rem);
+	background: white;
+	border-radius: var(--quarter-rem);
+	margin-inline: auto;
+	margin-block-start: calc(var(--full-half-rem) * 3);
+	width: 50vw;
+}
+.modal::backdrop {
+	background-color: rgba(0, 0, 0, .5);
+	backdrop-filter: blur(calc(var(--quarter-rem) / 4));
+}
+
+.modal-header {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-between;
+	margin-block-end: var(--full-rem);
+}
+
+.modal-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.modal-form-element input {
+	display: block;
+	padding: var(--quarter-rem);
+	margin-inline: auto;
+}
+.modal-form-element select {
+	display: block;
+	padding: var(--quarter-rem);
+	margin-inline: auto;
+}
+
+.modal-edit, .modal-save, .modal-close {
+	color: var(--color-lego-yellow-secondary);
+	font-size: var(--full-quarter-rem);
+	font-weight: bold;
+  }
+  .modal-edit {
+	justify-self: flex-start;
+  }
+  .modal-save {
+	visibility: hidden;
+	justify-self: center;
+  }
+  .modal-close {
+	justify-self: flex-end;
+  }
+
+.modal-edit:hover,
+.modal-edit:focus,
+.modal-save:hover,
+.modal-save:focus,
+.modal-close:hover,
+.modal-close:focus {
+	color:var(--color-lego-red);
+	cursor: pointer;
+}

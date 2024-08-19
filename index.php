@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="css/results.css">
+	<link rel="stylesheet" href="css/modal.css">
 
 	<!-- Google Fonts -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet"> -->
@@ -29,7 +30,7 @@
 		</div>
 		<div class="menu-items">
 			<li>
-				<a class="navbar-link" data-page="inventory">Inventory</a>
+				<a class="navbar-link" data-page="add_user" data-new-user onclick="openModal()">Add User</a>
 			</li>
 			<li>
 				<a class="navbar-link" data-page="sets">Sets</a>
@@ -56,8 +57,38 @@
 
 
 	<!-- Modal -->
-	<div id="myModal" class="modal" role="dialog">
-	</div>
+	<!--<div id="myModal" class="modal" role="dialog">
+	</div>-->
+	<dialog class="modal">
+		<header class="modal-header">
+			<h3>Add User</h3>
+			<div class="modal-save">
+				<i class="far fa-save"></i>
+			</div>
+			<div class="modal-close">
+				<i class="far fa-window-close"></i>
+			</div>
+		</header>
+		<div class="modal-grid">
+			<div class="modal-form-element">
+				<!--<label for="first_name">First Name:</label>-->
+				<input type="text" id="first_name" name="first_name" placeholder="First Name">
+			</div>
+			<div class="modal-form-element">
+				<!--<label for="last_name">Last Name:</label>-->
+				<input type="text" id="last_name" name="last_name" placeholder="Last Name">
+			</div>
+			<div class="modal-form-element">
+				<!--<label for="role" style="display:block;">Role:</label>-->
+				<select name="role" id="role">
+					<option selected="true" disabled="disabled" value="">Please Choose Role</option>	
+					<option value="Security Guard">Security Guard</option>
+					<option value="Security Supervisor">Security Supervisor</option>
+					<option value="Driveaway">Driveaway</option>
+				</select>
+			</div>
+		</div>
+	</dialog>
 	<!-- Modal -->
 
 	<!-- Help -->
