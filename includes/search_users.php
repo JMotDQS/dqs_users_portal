@@ -1,6 +1,8 @@
 <?php
 	include("config.php");
 
+	//$_POST['search_name'] = 'nasse';
+
 	$return_array = [];
 	$connection = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 	//if(mysqli_connect_error()) {//Use for PHP versions prior to 5.3
