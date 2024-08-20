@@ -87,6 +87,7 @@
 					<option selected="true" disabled="disabled" value="">Please Choose Role</option>	
 					<option value="Security Guard">Security Guard</option>
 					<option value="Security Supervisor">Security Supervisor</option>
+					<option value="Admin" disabled="disabled">Admin</option>
 					<option value="Driveaway">Driveaway</option>
 				</select>
 			</div>

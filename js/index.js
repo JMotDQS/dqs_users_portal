@@ -107,7 +107,13 @@ function setSearchResults() {
 							temp_html += `<option value="Security Supervisor">Security Supervisor</option>`;
 							//temp_html += `<option value="Recruiter">Recruiter</option>`;
 							//temp_html += `<option value="HR">HR</option>`;
-							//temp_html += `<option value="Admin">Admin</option>`;
+
+							if(search_array[i]['role'] == 'Admin') {
+								temp_html += `<option value="Admin">Admin</option>`;
+							} else {
+								temp_html += `<option value="Admin" disabled="disabled">Admin</option>`;
+							}
+							
 							temp_html += `<option value="Driveaway">Driveaway</option>`;
 						temp_html += `</select>`;
 					temp_html += `</div>`;
