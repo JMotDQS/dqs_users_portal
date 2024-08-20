@@ -1,9 +1,9 @@
 var flag_array = [];
+var new_user_array = [];
 
 function openModal() {
 	resetModalForm()
 	$('#first_name').keyup( () => {
-		console.log($('#first_name').val());
 		if ($('#first_name').val().length > 0) {
 			flag_array['first'] = true;
 		} else {
@@ -14,7 +14,6 @@ function openModal() {
 	});
 
 	$('#last_name').keyup( () => {
-		console.log($('#last_name').val());
 		if ($('#last_name').val().length > 0) {
 			flag_array['last'] = true;
 		} else {
@@ -25,7 +24,6 @@ function openModal() {
 	});
 
 	$('#role').change( () => {
-		console.log($('#role').val());
 		if ($('#role').val() == null) {
 			flag_array['role'] = false;
 		} else {
@@ -45,6 +43,22 @@ function closeModal() {
 
 function addUser() {
 	//myModal.close();
+	$('#first_name').prop('disabled', true);
+	$('#last_name').prop('disabled', true);
+	$('#role').prop('disabled', true);
+
+	addUserPromise().then(function(resolve) {
+		var temp_html = ``;
+		temp_html += `<p>First Name:&nbsp;${new_user_array[0]['first_name']}</p>`;
+		temp_html += `<p>Last Name:&nbsp;${new_user_array[0]['last_name']}</p>`;
+		temp_html += `<p>Badge ID:&nbsp;${new_user_array[0]['badge']}</p>`;
+		$('app').html(temp_html);
+		closeModal()
+	}).catch(function(reject) {
+		//console.log("Search Loaded!");
+	}).finally(function() {
+		//console.log("Fresh Search.");
+	});
 }
 
 function checkInput() {
@@ -67,6 +81,10 @@ function resetModalForm() {
 	$('#first_name').val('');
 	$('#last_name').val('');
 	$('#role').val('');
+
+	$('#first_name').prop('disabled', false);
+	$('#last_name').prop('disabled', false);
+	$('#role').prop('disabled', false);
 
 	checkInput();
 }

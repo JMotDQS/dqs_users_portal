@@ -60,7 +60,6 @@ function testFindIndex(param_id, param_flag) {
 
 function startSearch() {
 	startSearchPromise().then(function(resolve) {
-		console.log("startSearch():Search Completed.");
 		setSearchResults();
 	}).catch(function(reject) {
 		//console.log("Search Loaded!");
@@ -71,7 +70,6 @@ function startSearch() {
 
 function updateRecord(param_index) {
 	updateRecordPromise(param_index).then(function(resolve) {
-		console.log("Search Completed.");
 		startSearch();
 	}).catch(function(reject) {
 		//console.log("Search Loaded!");
