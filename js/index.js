@@ -127,6 +127,16 @@ function setSearchResults() {
 				temp_html += `</div>`;
 			temp_html += `</div>`;
 		}
+
+	/*
+		<div class="modal-edit">
+			<i class="fas fa-edit"></i>
+		</div>
+		<div class="modal-delete">
+			<i class="fas fa-trash-alt"></i>
+		</div>
+	*/
+
 		$('.search-results').html(temp_html);
 
 		for(i = 0; i <  resultsLength; i++) {
