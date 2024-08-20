@@ -18,6 +18,10 @@
 	margin-block-end: var(--full-rem);
 }
 
+#title > p {
+	font-style: italic;
+}
+
 .modal-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -42,7 +46,7 @@
 	justify-self: flex-start;
   }
   .modal-save {
-	visibility: hidden;
+	/*visibility: hidden;*/
 	justify-self: center;
   }
   .modal-close {

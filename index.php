@@ -61,11 +61,14 @@
 	</div>-->
 	<dialog class="modal">
 		<header class="modal-header">
-			<h3>Add User</h3>
-			<div class="modal-save">
+			<div id="title">
+				<h3>Add User</h3>
+				<p>all fields required</p>
+			</div>
+			<div class="modal-save invisible" onclick="addUser()">
 				<i class="far fa-save"></i>
 			</div>
-			<div class="modal-close">
+			<div class="modal-close" onclick="closeModal()">
 				<i class="far fa-window-close"></i>
 			</div>
 		</header>
@@ -105,6 +108,7 @@
 	<!-- Custom JavaScript -->
 	<script src="js/index.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/modal.js"></script>
 	<script src="js/promises.js"></script>
 	</body>
 </html>
