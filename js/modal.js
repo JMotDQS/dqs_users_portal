@@ -69,6 +69,10 @@ function checkInput() {
 	}
 }
 
+function generateNewBadge(ele) {
+	
+}
+
 function resetModalForm() {
 	flag_array['first'] = false;
 	flag_array['last'] = false;

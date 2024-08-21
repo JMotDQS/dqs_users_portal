@@ -10,6 +10,7 @@ function startSearchPromise() {
 			},
 
 			success: function (data) {
+				console.log(data);
 				search_array = [];
 				search_array = data;
 				resolve(true);

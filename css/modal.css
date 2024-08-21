@@ -37,7 +37,7 @@
 	margin-inline: auto;
 }
 
-.modal-edit, .modal-save, .modal-close {
+.modal-edit, .modal-save, .modal-close, .modal-create {
 	color: var(--color-lego-yellow-secondary);
 	font-size: var(--full-quarter-rem);
 	font-weight: bold;
@@ -58,7 +58,9 @@
 .modal-save:hover,
 .modal-save:focus,
 .modal-close:hover,
-.modal-close:focus {
+.modal-close:focus,
+.modal-create:hover,
+.modal-create:focus {
 	color:var(--color-lego-red);
 	cursor: pointer;
 }

@@ -99,7 +99,15 @@ function setSearchResults() {
 				temp_html += `<div class="card-grid card-data">`;
 					temp_html += `<div>${search_array[i]['last_name']}, ${search_array[i]['first_name']}</div>`;
 					temp_html += `<div>${search_array[i]['email']}</div>`;
-					temp_html += `<div>${search_array[i]['badge']}</div>`;
+
+					if(search_array[i]['badge'] == '') {
+						search_array[i]['badge'] = null;
+						temp_html += `<div class="modal-create" id="new-badge-id_${search_array[i]['id']}" onclick="generateNewBadge(this)">`;
+							temp_html += `<i class="fas fa-plus-square"></i>`;
+						temp_html += `</div>`;
+					} else {
+						temp_html += `<div>${search_array[i]['badge']}</div>`;
+					}
 
 					temp_html += `<div>`;
 						temp_html += `<select name="roles_${search_array[i]['id']}" id="roles_${search_array[i]['id']}" onchange="updateRole(this.id)">`;
@@ -134,6 +142,9 @@ function setSearchResults() {
 		</div>
 		<div class="modal-delete">
 			<i class="fas fa-trash-alt"></i>
+		</div>
+		<div class="modal-create">
+			<i class="fas fa-square-plus"></i>
 		</div>
 	*/
 
