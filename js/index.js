@@ -144,6 +144,9 @@ function setSearchResults() {
 		<div class="modal-delete">
 			<i class="fas fa-trash-alt"></i>
 		</div>
+		<div class="modal-delete">
+			<i class="fas fa-print"></i>
+		</div>
 	*/
 
 		$('.search-results').html(temp_html);
