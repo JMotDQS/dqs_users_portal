@@ -16,10 +16,10 @@ Returns true/false based on if a checkbox is checked or not.
 *******/
 function toggleSet(param_id) {
 	if($('#dnr_' + param_id).is(':checked')) {
-		$('#active-label_' + param_id).addClass('user-inactive');
+		$('#active-label_' + param_id).addClass('user-warning');
 		$('#active-label_' + param_id).html('Inactive');
 	} else {
-		$('#active-label_' + param_id).removeClass('user-inactive');
+		$('#active-label_' + param_id).removeClass('user-warning');
 		$('#active-label_' + param_id).html('Active');
 	}
 }
@@ -28,11 +28,11 @@ function toggleClicked(e) {
 	e.preventDefault;
 	my_id = parseInt(e.slice( (e.indexOf('_') + 1) ));
 	if($('#dnr_' + my_id).is(':checked')) {
-		$('#active-label_' + my_id).addClass('user-inactive');
+		$('#active-label_' + my_id).addClass('user-warning');
 		$('#active-label_' + my_id).html('Inactive');
 		testFindIndex(my_id, false);
 	} else {
-		$('#active-label_' + my_id).removeClass('user-inactive');
+		$('#active-label_' + my_id).removeClass('user-warning');
 		$('#active-label_' + my_id).html('Active');
 		testFindIndex(my_id, true);
 	}
@@ -95,7 +95,9 @@ function setSearchResults() {
 						temp_html += `<div>Badge</div>`;
 						temp_html += `<div>Role</div>`;
 						temp_html += `<div class="active-label" id="active-label_${search_array[i]['id']}">Deactivate</div>`;
+						temp_html += `<div class="user-warning">Delete User</div>`;
 				temp_html += `</div>`;
+
 				temp_html += `<div class="card-grid card-data">`;
 					temp_html += `<div>${search_array[i]['last_name']}, ${search_array[i]['first_name']}</div>`;
 					temp_html += `<div>${search_array[i]['email']}</div>`;
@@ -124,6 +126,11 @@ function setSearchResults() {
 							temp_html += `<span class="slider round"></span>`;
 						temp_html += `</label>`;
 					temp_html += `</div>`;
+
+					temp_html += `<div class="modal-delete">`;
+						temp_html += `<i class="fas fa-trash-alt"></i>`
+					temp_html += `</div>`
+
 				temp_html += `</div>`;
 			temp_html += `</div>`;
 		}

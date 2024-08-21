@@ -52,13 +52,19 @@
   .modal-close {
 	justify-self: flex-end;
   }
+  .modal-delete {
+	/*visibility: hidden;*/
+	justify-self: center;
+  }
 
 .modal-edit:hover,
 .modal-edit:focus,
 .modal-save:hover,
 .modal-save:focus,
 .modal-close:hover,
-.modal-close:focus {
+.modal-close:focus,
+.modal-delete:hover,
+.modal-delete:focus {
 	color:var(--color-lego-red);
 	cursor: pointer;
 }
