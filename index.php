@@ -32,7 +32,7 @@
 			<li>
 				<a class="navbar-link" data-page="add_user" data-new-user onclick="openModal()">Add User</a>
 			</li>
-			<li>
+			<!--<li>
 				<a class="navbar-link" data-page="sets">Sets</a>
 			</li>
 			<li>
@@ -46,7 +46,7 @@
 			</li>
 			<li>
 				<a class="navbar-link" data-page="stats">Stats</a>
-			</li>
+			</li>-->
 		</div>
 	</nav>
 
