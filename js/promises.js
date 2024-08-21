@@ -81,3 +81,28 @@ function addUserPromise() {
 		});
 	});
 }
+
+function deleteUserPromise(param_user_id) {
+	return new Promise(function(resolve, reject) {
+		$.ajax({
+			url: "includes/delete_user.php",
+			type: 'POST',
+			cache: false,
+			dataType: 'json',
+            data: {
+                'id':param_user_id
+			},
+
+			success: function (data) {
+				resolve(true);
+			},
+
+			error: function(xhr, desc, err) {
+				reject(false);
+				console.log(xhr)
+				console.log("Details: " + desc + "\nError:" + err);
+				console.log("updateRecordPromise():Something broke");
+			}
+		});
+	});
+}

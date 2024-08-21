@@ -11,11 +11,35 @@
 	backdrop-filter: blur(calc(var(--quarter-rem) / 4));
 }
 
+#warningModal > header > #title > h1 {
+	font-weight: 600;
+	color: #ff0000;
+}
+
 .modal-header {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: space-between;
 	margin-block-end: var(--full-rem);
+}
+
+#warning-body {
+	font-weight: 600;
+	margin-block-end: var(--full-rem);
+}
+.warning-modal-footer {
+	display: flex;
+	justify-content: space-around;
+}
+.warning-modal-button {
+	padding: var(--half-rem);
+	border-radius: var(--half-rem);
+	font-weight: 600;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+.warning-modal-button-delete {
+	color: #ff0000;
 }
 
 #title > p {

@@ -57,9 +57,7 @@
 
 
 	<!-- Modal -->
-	<!--<div id="myModal" class="modal" role="dialog">
-	</div>-->
-	<dialog class="modal">
+	<dialog class="modal" id="addModal">
 		<header class="modal-header">
 			<div id="title">
 				<h3>Add User</h3>
@@ -94,6 +92,24 @@
 		</div>
 	</dialog>
 	<!-- Modal -->
+
+	<!-- Warning Modal -->
+	<dialog class="modal" id="warningModal">
+		<header>
+			<div id="title">
+				<h1>WARNING!</h1>
+			</div>
+		</header>
+		<div id="warning-body">
+			<p>You are about to permanantly delete this user.</p>
+			<p>This action can not be undone!</p>
+		</div>
+		<div class="warning-modal-footer">
+			<button class="warning-modal-button" id="warning-modal-cancel" onclick="warningModal.close()">Cancel</button>
+			<button class="warning-modal-button warning-modal-button-delete" id="warning-modal-delete" onclick="confirmDeleteUser()">Delete</button>
+		</div>
+	</dialog>
+	<!-- Warning Modal -->
 
 	<!-- Help -->
 	<div id="help-window" class="help-window">

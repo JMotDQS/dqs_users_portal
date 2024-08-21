@@ -1,4 +1,6 @@
-const myModal = document.querySelector('.modal');
+const myModal = document.querySelector('#addModal');
+const warningModal = document.querySelector('#warningModal');
+var chosen_user_id = 0;
 
 $(document).ready(function() {
 	$('app').html('Please Start Search');
@@ -127,7 +129,7 @@ function setSearchResults() {
 						temp_html += `</label>`;
 					temp_html += `</div>`;
 
-					temp_html += `<div class="modal-delete">`;
+					temp_html += `<div class="modal-delete" id="user_${search_array[i]['id']}" onclick="deleteUser(this)">`;
 						temp_html += `<i class="fas fa-trash-alt"></i>`
 					temp_html += `</div>`
 
@@ -194,4 +196,20 @@ function setKeyEvents(param_page, param_element, param_multiplier = 1) {
 
 function clearTimer(param_timer) {
 	window.clearTimeout(param_timer); // prevent errant multiple timeouts from being generated
+}
+
+function deleteUser(ele) {
+	chosen_user_id = parseInt(ele.id.substr( ( parseInt(ele.id.indexOf('_') + 1) ) ));
+	warningModal.showModal();
+}
+
+function confirmDeleteUser() {
+	deleteUserPromise(chosen_user_id).then(function(resolve) {
+		warningModal.close()
+		startSearch();
+	}).catch(function(reject) {
+		//console.log("Search Loaded!");
+	}).finally(function() {
+		//console.log("Fresh Search.");
+	});
 }
