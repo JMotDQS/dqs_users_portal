@@ -82,3 +82,30 @@ function addUserPromise() {
 		});
 	});
 }
+
+function generateBadgePromise(param_id) {
+	return new Promise(function(resolve, reject) {
+		$.ajax({
+			url: "includes/generate_badge.php",
+			type: 'POST',
+			cache: false,
+			dataType: 'json',
+            data: {
+                'id': param_id
+			},
+
+			success: function (data) {
+				/*new_user_array = [];
+				new_user_array = data;*/
+				resolve(true);
+			},
+
+			error: function(xhr, desc, err) {
+				reject(false);
+				console.log(xhr)
+				console.log("Details: " + desc + "\nError:" + err);
+				console.log("updateRecordPromise():Something broke");
+			}
+		});
+	});
+}

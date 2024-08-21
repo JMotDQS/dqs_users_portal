@@ -70,7 +70,15 @@ function checkInput() {
 }
 
 function generateNewBadge(ele) {
-	
+	var chosen_user_id = parseInt(ele.id.substr( ( parseInt(ele.id.indexOf('_') + 1) ) ));
+
+	generateBadgePromise(chosen_user_id).then(function(resolve) {
+		startSearch();
+	}).catch(function(reject) {
+		//console.log("Search Loaded!");
+	}).finally(function() {
+		//console.log("Fresh Search.");
+	});
 }
 
 function resetModalForm() {
