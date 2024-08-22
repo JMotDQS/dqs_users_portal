@@ -100,7 +100,7 @@ function setSearchResults() {
 					temp_html += `<div>${search_array[i]['last_name']}, ${search_array[i]['first_name']}</div>`;
 					temp_html += `<div>${search_array[i]['email']}</div>`;
 
-					if(search_array[i]['badge'] == '') {
+					if(search_array[i]['badge'] == '' || search_array[i]['badge'] == null) {
 						search_array[i]['badge'] = null;
 						temp_html += `<div class="modal-create" id="new-badge-id_${search_array[i]['id']}" onclick="generateNewBadge(this)">`;
 							temp_html += `<i class="fas fa-plus-square"></i>`;
