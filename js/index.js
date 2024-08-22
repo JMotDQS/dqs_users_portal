@@ -102,6 +102,7 @@ function setSearchResults() {
 						temp_html += `<div>Badge</div>`;
 						temp_html += `<div>Role</div>`;
 						temp_html += `<div class="active-label" id="active-label_${search_array[i]['id']}">Deactivate</div>`;
+						temp_html += `<div>Print QR</div>`;
 				temp_html += `</div>`;
 				temp_html += `<div class="card-grid card-data">`;
 					temp_html += `<div>${search_array[i]['last_name']}, ${search_array[i]['first_name']}</div>`;
@@ -139,6 +140,11 @@ function setSearchResults() {
 							temp_html += `<span class="slider round"></span>`;
 						temp_html += `</label>`;
 					temp_html += `</div>`;
+
+					temp_html += `<div class="modal-print" id="user-print_${search_array[i]['id']}" onclick="printUser(this)">`;
+						temp_html += `<i class="fas fa-print"></i>`;
+					temp_html += `</div>`;
+
 				temp_html += `</div>`;
 			temp_html += `</div>`;
 		}

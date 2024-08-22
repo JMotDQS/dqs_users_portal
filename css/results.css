@@ -4,7 +4,7 @@
 
 .card-grid {
 	display: grid;
-	grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+	grid-template-columns: 2fr 2fr 1fr 2fr 1fr 1fr;
 }
 .card-titles {
 	font-size: var(--three-quarter-rem);
@@ -16,6 +16,11 @@
 .card-data {
 	font-size: var(--three-quarter-rem);
 	font-weight: 600;
+}
+
+.modal-print {
+	font-size: var(--full-quarter-rem);
+	cursor: pointer;
 }
 
 
