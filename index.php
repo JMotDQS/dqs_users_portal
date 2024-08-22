@@ -27,6 +27,7 @@
 			<label for="navbar-search">User Search:</label>
 			<input type=text id="navbar-search" name="navbar-search" />
 			<button class="button" onClick="startSearch()">Search</button>
+			<button class="button btn-clear" onClick="clearSearch()">Clear</button>
 		</div>
 		<div class="menu-items">
 			<li>
@@ -52,7 +53,7 @@
 
 	<main>
 		<app class="app" id="app"></app>
-		<div class="search-results">&nbsp;</div>
+		<div class="search-results"></div>
 	</main>
 
 

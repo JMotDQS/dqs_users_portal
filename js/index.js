@@ -68,6 +68,13 @@ function startSearch() {
 	});
 }
 
+function clearSearch() {
+	$('app').html('Please Start Search');
+	$('.search-results').html('');
+	$('#navbar-search').val('');
+	$('#navbar-search').focus();
+}
+
 function updateRecord(param_index) {
 	updateRecordPromise(param_index).then(function(resolve) {
 		startSearch();
@@ -83,7 +90,7 @@ function setSearchResults() {
 	resultsLength = search_array.length;
 	if(resultsLength < 1) {
 		$('app').html('No results found.');
-		$('.search-results').html('&nbsp;');
+		$('.search-results').html('');
 	} else {
 		$('app').html(resultsLength + ' result(s) found.');
 

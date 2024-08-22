@@ -64,6 +64,16 @@ a {
 	color: white;
 }
 
+.btn-clear {
+	background-color: #ffffff;
+	margin-inline-start: var(--full-rem);
+}
+.btn-clear:hover {
+	color: #ffffff;
+	background-color: var(--color-medium-dark);
+	outline: 1px solid #ffffff
+}
+
 .grid-container {
 	display: grid;
 	gap: var(--half-rem);
