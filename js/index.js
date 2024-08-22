@@ -1,4 +1,5 @@
 const myModal = document.querySelector('.modal');
+var chosen_user_id = 0;
 
 $(document).ready(function() {
 	$('app').html('Please Start Search');
@@ -212,3 +213,18 @@ function setKeyEvents(param_page, param_element, param_multiplier = 1) {
 function clearTimer(param_timer) {
 	window.clearTimeout(param_timer); // prevent errant multiple timeouts from being generated
 }
+
+function printUser(ele) {
+	chosen_user_id = parseInt(ele.id.substr( ( parseInt(ele.id.indexOf('_') + 1) ) ));
+}
+
+/*function confirmDeleteUser() {
+	deleteUserPromise(chosen_user_id).then(function(resolve) {
+		warningModal.close()
+		startSearch();
+	}).catch(function(reject) {
+		//console.log("Search Loaded!");
+	}).finally(function() {
+		//console.log("Fresh Search.");
+	});
+}*/
