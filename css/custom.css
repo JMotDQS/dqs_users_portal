@@ -21,6 +21,7 @@ Media queries are for styling on larger screens.
 
 	--quarter-rem: .25rem;
 	--half-rem: .5rem;
+	--three-quarter-rem: .75rem;
 	--full-rem: 1rem;
 	--full-quarter-rem: 1.25rem;
 	--full-half-rem: 1.5rem;

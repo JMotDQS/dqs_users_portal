@@ -1,0 +1,26 @@
+.key-case {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 150px));
+    gap: var(--half-rem);
+    justify-content: center;
+}
+
+.case-slot {
+    outline: 2px solid #ffc505;
+    padding: var(--half-rem);
+}
+
+.slot-title {
+    margin-block-end: var(--quarter-rem);
+}
+
+.slot-key-icon {
+    font-size: calc(var(--full-half-rem) * 2);
+    color: #cc9c00;
+    margin-block-end: var(--three-quarter-rem);
+}
+
+.slot-vin {
+    font-size: var(--three-quarter-rem);
+    font-weight: 300;
+}
