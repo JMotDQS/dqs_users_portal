@@ -60,6 +60,9 @@ function testFindIndex(param_id, param_flag) {
 }
 
 function startSearch() {
+	var temp_html = `<progress></progress>`;
+	$('.search-results').html(temp_html);
+	$('app').html('Searching...');
 	startSearchPromise().then(function(resolve) {
 		setSearchResults();
 	}).catch(function(reject) {
