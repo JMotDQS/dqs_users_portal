@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="css/results.css">
 	<link rel="stylesheet" href="css/modal.css">
-	<link rel="stylesheet" href="css/keyCase.css">
 
 	<!-- Google Fonts -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet"> -->

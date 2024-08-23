@@ -3,7 +3,6 @@ var chosen_user_id = 0;
 
 $(document).ready(function() {
 	$('app').html('Please Start Search');
-	//$('app').html(testKeyCase());
 });
 
 /*******
@@ -229,74 +228,3 @@ function printUser(ele) {
 		//console.log("Fresh Search.");
 	});
 }*/
-
-function testKeyCase() {
-	var case_html = '';
-	case_html += `<div class="key-case">`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001A</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-			case_html += `<div class="slot-vin">`;
-				case_html += `<p>718IIRPGXGA74R7R4</p>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001B</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001C</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001D</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001E</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001F</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001G</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001H</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001I</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-		case_html += `<div class="case-slot">`;
-			case_html += `<h3 class="slot-title">001J</h3>`;
-			case_html += `<div class="slot-key-icon">`;
-				case_html += `<i class="fas fa-key"></i>`;
-			case_html += `</div>`;
-		case_html += `</div>`;
-	case_html += `</div>`;
-
-	return case_html;
-}
