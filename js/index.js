@@ -2,8 +2,8 @@ const myModal = document.querySelector('.modal');
 var chosen_user_id = 0;
 
 $(document).ready(function() {
-	//$('app').html('Please Start Search');
-	$('app').html(testKeyCase());
+	$('app').html('Please Start Search');
+	//$('app').html(testKeyCase());
 });
 
 /*******
