@@ -9,7 +9,7 @@
 	if ($connection->connect_error) {// Use for PHP versions 5.3+
 		die("Connect Error (".mysqli_connect_errno().") ".mysqli_connect_error());
 	} else {
-		$sql = "SELECT id, badge, first_name, last_name, email, role, approved, activated
+		$sql = "SELECT id, badge, first_name, last_name, title, email, role, approved, activated
                 FROM users
                 WHERE first_name LIKE '%".$_POST['search_name']."%'
                     OR last_name LIKE '%".$_POST['search_name']."%'

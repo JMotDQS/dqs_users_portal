@@ -219,6 +219,16 @@ function clearTimer(param_timer) {
 
 function printUser(ele) {
 	chosen_user_id = parseInt(ele.id.substr( ( parseInt(ele.id.indexOf('_') + 1) ) ));
+	//console.log(chosen_user_id);
+	//console.log(ele);
+	//console.log($(`[data-id=${chosen_user_id}]`));
+	const selected_index = search_array.findIndex(item => item.id == chosen_user_id);
+	console.log("selected_index:", selected_index);
+	console.log("First Name:", search_array[selected_index].first_name);
+	console.log("Last Name:", search_array[selected_index].last_name);
+	console.log("Role:", search_array[selected_index].role);
+	console.log("Badge:", search_array[selected_index].badge);
+	console.log("------------------------------------------------");
 }
 
 /*function confirmDeleteUser() {
