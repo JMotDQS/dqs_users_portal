@@ -52,7 +52,7 @@ function addUser() {
 		temp_html += `<p>First Name:&nbsp;${new_user_array[0]['first_name']}</p>`;
 		temp_html += `<p>Last Name:&nbsp;${new_user_array[0]['last_name']}</p>`;
 		temp_html += `<p>Badge ID:&nbsp;${new_user_array[0]['badge']}</p>`;
-		temp_html += `<p>ROle:&nbsp;${new_user_array[0]['role']}</p>`;
+		temp_html += `<p>Role:&nbsp;${new_user_array[0]['role']}</p>`;
 		$('app').html(temp_html);
 		closeModal()
 	}).catch(function(reject) {
