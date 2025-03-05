@@ -85,11 +85,12 @@
 			<div class="modal-form-element">
 				<!--<label for="role" style="display:block;">Role:</label>-->
 				<select name="role" id="role">
-					<option selected="true" disabled="disabled" value="">Please Choose Role</option>	
+					<option selected="true" disabled="disabled" value="">Please Choose Role</option>
+					<option value="Driveaway">Driveaway</option>
+					<option value="Keymaster">Keymaster</option>	
 					<option value="Security Guard">Security Guard</option>
 					<option value="Security Supervisor">Security Supervisor</option>
 					<option value="Admin" disabled="disabled">Admin</option>
-					<option value="Driveaway">Driveaway</option>
 				</select>
 			</div>
 		</div>
