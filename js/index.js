@@ -123,6 +123,8 @@ function setSearchResults() {
 
 					temp_html += `<div>`;
 						temp_html += `<select name="roles_${search_array[i]['id']}" id="roles_${search_array[i]['id']}" onchange="updateRole(this.id)">`;
+							temp_html += `<option value="Driveaway">Driveaway</option>`;
+							temp_html += `<option value="Keymaster">Keymaster</option>`;
 							temp_html += `<option value="Security Guard">Security Guard</option>`;
 							temp_html += `<option value="Security Supervisor">Security Supervisor</option>`;
 							//temp_html += `<option value="Recruiter">Recruiter</option>`;
@@ -134,7 +136,7 @@ function setSearchResults() {
 								temp_html += `<option value="Admin" disabled="disabled">Admin</option>`;
 							}
 							
-							temp_html += `<option value="Driveaway">Driveaway</option>`;
+							
 						temp_html += `</select>`;
 					temp_html += `</div>`;
 
